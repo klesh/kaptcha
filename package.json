@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/klesh/kaptcha/issues"
   },
-  "homepage": "https://github.com/klesh/kaptcha#readme"
+  "homepage": "https://github.com/klesh/kaptcha#readme",
+  "dependencies": {
+    "canvas": "^1.2.9"
+  }
 }
