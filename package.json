@@ -1,0 +1,23 @@
+{
+  "name": "kaptcha",
+  "version": "1.0.0",
+  "description": "simple 6 digit captcha image middleware for express, modified from captcha middleware.",
+  "main": "kaptcha.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klesh/kaptcha.git"
+  },
+  "keywords": [
+    "captcha",
+    "ccap"
+  ],
+  "author": "Klesh Wong",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/klesh/kaptcha/issues"
+  },
+  "homepage": "https://github.com/klesh/kaptcha#readme"
+}
