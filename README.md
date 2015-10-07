@@ -2,7 +2,7 @@
 simple 6 digit captcha image middleware for express, modified from captcha middleware
 
 ## Installation
-Canvas is required, please follow canvas instruction to install canvase dependencies. [Canvas@npmjs](https://www.npmjs.com/package/canvas)
+Canvas is required, please follow canvas instruction to install canvase dependencies. [Canvas Wiki](https://www.npmjs.com/package/canvas)
 
 Once canvas is installed successfully, run npm command to install kaptcha.
 ```
