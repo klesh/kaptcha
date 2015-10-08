@@ -10,26 +10,32 @@ npm install kaptcha
 ```
 
 ## Usage
-Mount kaptcha middleware:
+As middleware:
 ```
 var kaptcha = require('kaptcha');
 
-app.use(kaptcha({ 
-  url: '/kaptcha.jpg', 
+app.get('/kaptcha.png', kaptcha({ 
   color: 'rgb(0, 0, 0)', 
   background: 'rgb(255, 255, 255)',
   width: 100, 
   height: 30, 
-  save: function(code) { 
-    console.log(code); 
-  }  
-}));
+}))
+
+app.post('/authenticate', function(req, res) {
+  console.log(req.session.captcha == req.body.captcha);
+})
+```
+Customize:
+```
+var kaptcha = require('kaptcha');
+
+app.get('/captcha', function(req, res) {
+  var code = kaptcha.generateCode();
+  kaptcha.generateImage(req, res, { width: 100, height: 30, text: code });
+})
 ```
 
 ## Parameters
-
-### url
-url to render captcha image.
 
 ### color
 font color
@@ -43,5 +49,5 @@ image width
 ### height
 image height
 
-### save
-Optional callback to receive generated random digit, or kaptcha will try to save it to req.session.captcha .
+### text
+Optional captcha random code
