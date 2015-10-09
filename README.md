@@ -10,7 +10,7 @@ npm install kaptcha
 ```
 
 ## Usage
-As middleware:
+As middleware (express-session middleware is required):
 ```
 var kaptcha = require('kaptcha');
 
@@ -18,7 +18,7 @@ app.get('/kaptcha.png', kaptcha({
   color: 'rgb(0, 0, 0)', 
   background: 'rgb(255, 255, 255)',
   width: 100, 
-  height: 30, 
+  height: 30 
 }))
 
 app.post('/authenticate', function(req, res) {
@@ -50,4 +50,4 @@ image width
 image height
 
 ### text
-Optional captcha random code
+Optional captcha random code for generateImage(), and will be ignored in kaptcha middleware function.
