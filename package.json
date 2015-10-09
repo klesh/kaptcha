@@ -1,10 +1,10 @@
 {
   "name": "kaptcha",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "simple 6 digit captcha image middleware for express, modified from captcha middleware.",
   "main": "kaptcha.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./test/test.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   "homepage": "https://github.com/klesh/kaptcha#readme",
   "dependencies": {
     "canvas": "^1.2.9"
+  },
+  "devDependencies": {
+    "should": "^7.1.0"
   }
 }

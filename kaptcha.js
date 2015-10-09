@@ -4,7 +4,7 @@ function generateCode() {
   return ('' + Math.random()).substr(3, 6);
 }
 
-function generateImage(params) {
+function generateImage(req, res, params) {
   params.color = params.color || 'rgb(0, 0, 0)';
   params.background = params.background || 'rgb(255, 255, 255)';
   params.width = params.width || 250;
@@ -38,7 +38,7 @@ function generateImage(params) {
     ctx.stroke();
   }
 
-  var text = params.text;
+  var text = params.text || generateCode();
 
   for (i = 0; i < text.length; i++) {
     ctx.setTransform(Math.random() * 0.5 + 1, Math.random() * 0.4, Math.random() * 0.4, Math.random() * 0.5 + 1, params.fontWidth * i + offset, params.height * 2 / 3);
