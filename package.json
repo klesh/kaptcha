@@ -1,6 +1,6 @@
 {
   "name": "kaptcha",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "simple 6 digit captcha image middleware for express, modified from captcha middleware.",
   "main": "kaptcha.js",
   "scripts": {
